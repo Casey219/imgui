@@ -3834,7 +3834,7 @@ void ImGui::GcAwakeTransientWindowBuffers(ImGuiWindow* window)
 void ImGui::SetActiveID(ImGuiID id, ImGuiWindow* window)
 {
     ImGuiContext& g = *GImGui;
-
+    if (window == nullptr) return;
 
     for (int i = 0; i < window->DC.Layouts.Data.Size; i++)
     {
